@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moovit Movies | Home</title>
+    <link rel="stylesheet" href="css/static.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./details.html">NOW PLAYING</a></li>
+                <li id="logoHolder"><span>Moovit</span>
+                    <img src="assets/logo.png" alt="logo">
+                    <span>Movies</span>
+                </li>
+                <li><a href="./purchase.html">BUY TICKETS</a></li>
+                <li><a href="./index.html#location">LOCATION</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="nowPlaying">
+            <img src="assets/Avengers-poster1.jpg" alt="Avengers-poster1.jpg">
+            <p>Now Playing! <br /> <br /> AVENGERS-ENDGAME <br /> <br /> Jan 21st - Mar 19th</p>
+            <button onclick="viewDetails()">VIEW DETAILS</button>
+        </section>
+
+        <section id="allMovies">
+            <h2>ALL MOVIES</h2>
+            <div id="container">
+                <div class="imgcontainer">
+                    <img src="assets/Avengers-poster2.jpeg" id="mv1" alt="Avengers-poster2.jpg" onclick="viewDetails()">
+                    <div class="btn-center"><button type="button" class="npmv" onclick="viewDetails()"></button></div>
+                </div>
+                <div class="imgcontainer">
+                    <img src="assets/intime.jpg" id="mv2" alt="Avengers-poster2.jpg">
+                    <div class="btn-center"><button type="button" class="csmv"></button></div>
+                </div>
+                <div class="imgcontainer">
+                    <img src="assets/marriage-story.jpg" id="mv3" alt="Avengers-poster2.jpg">
+                    <div class="btn-center"><button type="button" class="csmv"></button></div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <h2>OUR LOCATION</h2>
+    <section id="location">
+        <div id="loca-info">
+            <h3>Moovit Movies</h3>
+            <p>3401 Dufferin St, Toronto, ON M6A 2T9</p>
+            <p>Contact us: <br> <img src="assets/phone.jpg" class="img-1" alt="phone number"> 647-122-3456 <br> 
+                Customer Service: <br> <img src="assets/email.jpg" class="img-1" alt="email"> CS_MM@MoovitMovies.com</p>
+            <table>
+                <tr>
+                    <th class="th">Days</th>
+                    <th class="th">Hours</th>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>9:00am - 12:00pm</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>9:00am - 11:00pm</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>9:00am - 11:00pm</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>9:00am - 11:00pm</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>9:00am - 11:00pm</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>9:00am - 12:00pm</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>9:00am - 12:00pm</td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <p>©2023 Moovit Movies, Inc.</p>
+
+        <div>
+            <img src="assets/facebook.png" alt="Facebook">
+            <span>Moovit Movies</span>
+            <img src="assets/instagram.png" alt="Instagram">
+            <span>@MoovitMovies</span>
+            <img src="assets/twitter.png" alt="Twitter">
+            <span>@MoovitMovies</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/localStorage.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html> 

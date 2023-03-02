@@ -1,0 +1,198 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#nowPlaying {
+    position: relative;
+}
+
+#nowPlaying>img {
+    width: 100%;
+}
+
+#nowPlaying p {
+    font-family: 'Bangers', cursive;
+    background-color: rgba(18, 18, 175, 0);
+    position: absolute;
+    top: 32%;
+    right: 6%;
+    font-size: 2vw;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 50%;
+}
+
+#nowPlaying>button {
+    font-family: 'Bangers', cursive;
+    position: absolute;
+    top: 44%;
+    right: 9%;
+    font-size: 2vw;
+    background-color: rgb(79, 42, 192);
+    color: rgb(119, 238, 7);
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#nowPlaying>button:hover {
+    background-color: rgb(10, 159, 85);
+    color: rgb(18, 18, 190);
+}
+
+#allMovies>h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+}
+
+#container>.imgcontainer {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    height: 500px;
+}
+
+#container>.imgcontainer>img {
+    max-width: 275px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: max-width 0.2s;
+}
+
+#container>.imgcontainer>img:hover {
+    max-width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn-center {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.btn-center>button {
+
+    text-align: center;
+    border: 1px solid white;
+    background-color: cyan;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    width: 100px;
+    height: 25px;
+    transition: width 0.5s;
+}
+
+.btn-center>button:hover {
+    width: 100px;
+}
+
+.btn-center>.npmv::after{
+    content: "veiw details";
+    transition: 1s, opacity 1s;
+}
+
+.btn-center>.csmv::after{
+    content: "coming soon";
+    transition: 1s, opacity 1s;
+}
+
+.btn-center>button:hover::after{
+    opacity: 0;
+}
+
+
+.btn-center>button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s, opacity 0.6s;
+}
+
+.btn-center>.npmv::before {
+    content: "view details";
+    transform: translate(0, -100%);
+    top: 4px;
+}
+
+.btn-center>.csmv::before {
+    content: "coming soon";
+    transform: translate(-150%, 0);
+    top: 4px;
+}
+
+.btn-center>button:hover::before {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition-delay: 0.4s;
+}
+
+#location {
+    display: flex;
+    width: 90%;
+    text-align: center;
+}
+
+body>h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#loca-info {
+    flex: 2;
+    line-height: 25px;
+}
+
+#map {
+    width: 600px;
+    height: 400px;
+
+}
+
+#loca-info table {
+    border: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#loca-info table td {
+    border: 1px solid white;
+}
+
+.th {
+    width: 150px;
+    border: 1px solid rgb(193, 11, 11);
+}
+
+.img-1 {
+    width: 20px;
+    height: 20px;
+    transform: translateY(4px);
+}
+
+#map * {
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+}

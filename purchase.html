@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moovit Movies | Buy Tickets</title>
+    <link rel="stylesheet" href="css/purchase.css" />
+    <link rel="stylesheet" href="css/static.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./details.html">NOW PLAYING</a></li>
+                <li id="logoHolder"><span>Moovit</span>
+                    <img src="assets/logo.png" alt="logo">
+                    <span>Movies</span>
+                </li>
+                <li><a href="./purchase.html">BUY TICKETS</a></li>
+                <li><a href="./index.html#location">LOCATION</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="#" id="left-column">
+            <h1>Tickets</h1>
+            <p id="qty-error-msg"></p>
+
+            <div class="ticket-qty">
+                <label for="general-admission">General Admission - $15.99</label>
+                <input id="general-admission" type="number" min="0" value="0">
+            </div>
+            <div class="ticket-qty">
+                <label for="discount-admission">Students and Seniors - $12.99</label>
+                <input id="discount-admission" type="number" min="0" value="0">
+            </div>
+
+            <h1>Payment Information</h1>
+            <p id="payment-error-msg"></p>
+
+            <div class="payment-info" id="paypal-payment">
+                <input type="radio" class="payment-method" name="payment-method" id="paypal" value="paypal">
+                <label for="paypal">Paypal</label>
+                <img src="assets/paypal.png" alt="Paypal">
+            </div>
+
+            <div id="paypal-login-info" class="payment-credentials"></div>
+
+
+            <div class="payment-info" id="card-payment">
+                <input type="radio" class="payment-method" name="payment-method" id="card" value="card">
+                <label for="card">Credit or Debit Card</label>
+                <img src="assets/card.png" alt="Credit or Debit Card">
+            </div>
+            <div id="card-info" class="payment-credentials"></div>
+
+            <div id="btn-container">
+                <button type="button">PAY NOW</button>
+            </div>
+        </form>
+
+        <div id="right-column">
+            <img src="assets/Avengers-poster1.jpg" alt="film poster">
+
+            <div id="order-summary">
+                <h2>Movie Showtime Summary</h2>
+                <table id="movie-showtime-summary">
+                    <tr>
+                        <th>Movie Title</th>
+                        <td id="movie-title"></td>
+                    </tr>
+                    <tr>
+                        <th>Showtime Date</th>
+                        <td id="show-date"></td>
+                    </tr>
+                    <tr>
+                        <th>Time</th>
+                        <td id="time"></td>
+                    </tr>
+                </table>
+
+                <h2>Order Summary</h2>
+                <table id="fee-breakdown">
+                    <tr>
+                        <th>General Admission (<span id="general-qty"></span> x $15.99)</th>
+                        <td id="general-total"></td>
+                    </tr>
+                    <tr>
+                        <th>Student and Senior (<span id="discount-qty"></span> x $12.99)</th>
+                        <td id="discount-total"></td>
+                    </tr>
+                    <tr>
+                        <th>Subtotal</th>
+                        <td id="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <th>Tax (13%)</th>
+                        <td id="tax"></td>
+                    </tr>
+                    <tr id="total-row">
+                        <th>You must pay:</th>
+                        <td id="total-payment"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>©2023 Moovit Movies, Inc.</p>
+
+        <div>
+            <img src="assets/facebook.png" alt="Facebook">
+            <span>Moovit Movies</span>
+            <img src="assets/instagram.png" alt="Instagram">
+            <span>@MoovitMovies</span>
+            <img src="assets/twitter.png" alt="Twitter">
+            <span>@MoovitMovies</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/purchase.js"></script>
+    <script type="text/javascript" src="js/localStorage.js"></script>
+</body>
+
+</html>

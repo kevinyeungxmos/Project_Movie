@@ -1,0 +1,82 @@
+/* This file contains generic styling on webpages */
+
+* {
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: auto 40px;
+}
+
+/* Header */
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    letter-spacing: 2px;
+}
+
+header a {
+    text-decoration: none;
+    font-family: Verdana, Geneva;
+}
+
+header img {
+    height: 60px;
+}
+
+header li {
+    display: flex;
+}
+
+header a:hover {
+    color: #8CD1C6;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* logo section
+    --- separating from li; 
+        better for modification in the future */
+#logoHolder {
+    align-items: center;
+}
+
+header span {
+    display: block;
+    letter-spacing: 3px;
+    margin: 0px 10px;
+    font-weight: bold;
+    font-family: Cambria, Cochin;
+    cursor: default;
+    user-select: none;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60px;
+    font-family: Georgia, 'Times New Roman';
+}
+
+footer p {
+    letter-spacing: 3px;
+}
+
+footer img{
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 30px;
+    margin-right: 5px;
+}
+
+footer span {
+    text-decoration: none;
+    letter-spacing: 1px;
+}
